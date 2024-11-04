@@ -8,7 +8,7 @@ identify suitable job openings, collaborations, and funding opportunities.
 
 ## Project Structure
 
-````sh
+```sh
 ├── LICENSE
 ├── README.md
 ├── outputs/
@@ -23,7 +23,7 @@ identify suitable job openings, collaborations, and funding opportunities.
  │   ├── opportunities.csv
  │   └── talents.csv
  └── main.py
- ```
+```
 
 ## Installation
 
@@ -32,7 +32,7 @@ identify suitable job openings, collaborations, and funding opportunities.
 ```sh
 git clone <https://github.com/barackm/conekthub.git>
 cd <conekthub>
-````
+```
 
 2. **Create and activate a virtual environment:**
 
@@ -111,7 +111,3 @@ cd <conekthub>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file
 for details.
-
-```
-
-```
