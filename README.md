@@ -1,10 +1,26 @@
-# Talent Connection Crew
+# ConektHub: AI-Driven Talent and Opportunity Matching Platform for Rwanda
 
-## Overview
+ConektHub is an AI-powered platform designed to connect talented individuals
+with personalized job, collaboration, and funding opportunities in Rwanda. Built
+with CrewAI and powered by OpenAI’s language models, ConektHub utilizes
+specialized AI agents to analyze candidate profiles, match them with the most
+relevant opportunities, and generate tailored insights. The platform's modular,
+agent-based architecture allows for scalable and dynamic recommendations,
+supporting talent growth and entrepreneurial connections across the country.
 
-The Talent Connection Crew is a system designed to match a single candidate with
-relevant opportunities. It leverages AI agents to process candidate profiles and
-identify suitable job openings, collaborations, and funding opportunities.
+## Features
+
+- **AI Agents**: Dedicated agents perform specialized tasks, from analyzing
+  candidate skills and experience to refining opportunity matches.
+- **Powered by OpenAI and CrewAI**: Utilizes OpenAI’s models through CrewAI for
+  deep insights and personalized recommendations.
+- **Scalable, Context-Aware Matching**: Efficiently organizes tasks to ensure
+  each candidate receives the most relevant opportunities based on their unique
+  profile.
+
+ConektHub is built to grow with Rwanda’s talent and entrepreneurial ecosystem.
+Join us in creating a smarter, AI-driven future for connecting opportunities and
+people!
 
 ## Project Structure
 
