@@ -8,29 +8,31 @@ identify suitable job openings, collaborations, and funding opportunities.
 
 ## Project Structure
 
+````sh
 ├── LICENSE
 ├── README.md
 ├── outputs/
 ├── requirements.txt
 └── src
-    ├── __init__.py
-    ├── config
-    │   ├── agents.yaml
-    │   └── tasks.yaml
-    ├── crew.py
-    ├── data
-    │   ├── opportunities.csv
-    │   └── talents.csv
-    └── main.py
+ ├── __init__.py
+ ├── config
+ │   ├── agents.yaml
+ │   └── tasks.yaml
+ ├── crew.py
+ ├── data
+ │   ├── opportunities.csv
+ │   └── talents.csv
+ └── main.py
+ ```
 
 ## Installation
 
 1. **Clone the repository:**
 
-   ```sh
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
+```sh
+git clone <https://github.com/barackm/conekthub.git>
+cd <conekthub>
+````
 
 2. **Create and activate a virtual environment:**
 
