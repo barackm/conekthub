@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Smart Irrigation System",
+    "description": "Building an IoT solution to automate irrigation based on weather data.",
+    "owner_id": 1,
+    "skills_required": ["Python", "IoT", "Agriculture"],
+    "industry": "Agriculture",
+    "location": "Kigali, Rwanda",
+    "status": "Open",
+    "collaborators_needed": 2,
+    "tags": ["IoT", "Agriculture", "Automation"]
+  },
+  {
+    "id": 2,
+    "title": "Crop Disease Detection",
+    "description": "A machine learning model for detecting crop diseases using image recognition.",
+    "owner_id": 1,
+    "skills_required": ["Machine Learning", "Python", "Agriculture"],
+    "industry": "Agriculture",
+    "location": "Kigali, Rwanda",
+    "status": "In Progress",
+    "collaborators_needed": 1,
+    "tags": ["Machine Learning", "Agriculture", "Image Recognition"]
+  }
+]

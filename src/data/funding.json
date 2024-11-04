@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "Agricultural Innovation Grant",
+    "description": "Grant to support innovative projects that improve sustainability in agriculture.",
+    "eligibility_criteria": ["Youth-led project", "Rwanda-based"],
+    "funding_amount": "$10,000",
+    "deadline": "2024-12-01",
+    "industry_focus": "Agriculture",
+    "location_focus": "Rwanda",
+    "application_link": "https://funding.agri-grants.com"
+  }
+]
