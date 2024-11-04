@@ -1,12 +1,4 @@
-backports.tarfile==1.2.0
 crewai==0.76.9
-grpcio-status==1.62.3
-h2==4.1.0
-httptools==0.6.4
-jaraco.collections==5.1.0
-pip-chill==1.0.3
-platformdirs==4.2.2
-pysocks==1.7.1
-uvloop==0.21.0
-watchfiles==0.24.0
-websockets==13.1
+crewai_tools==0.13.4
+python-dotenv==1.0.1
+openai==0.10.3
