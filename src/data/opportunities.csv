@@ -1,0 +1,11 @@
+Opportunity ID,Type of Opportunity,Title,Industry,Location,Required Skills,Experience Level Required,Application Deadline,Funding Amount/Salary,Organization/Company
+101,Job,AI Research Internship,Technology,Kigali,"Python, AI Research",Entry,2024-12-31,$500/month,AI Solutions Ltd
+102,Funding,Start-up Grant for EdTech,Education,Rwanda,Project Management,Intermediate,2024-11-30,"$10,000",EdTech Fund
+103,Job,Full Stack Developer,Technology,Remote,"JavaScript, Python, Django",Intermediate,2024-10-15,$7000,Tech Innovations
+104,Collaboration,Healthcare Data Analysis Collaboration,Healthcare,Huye,"Data Analysis, Statistics",Intermediate,2024-12-15,N/A,Health Analytics Corp
+105,Job,Marketing Specialist,Media,Kigali,"Content Creation, SEO",Entry,2024-09-30,$400/month,Media Experts
+106,Funding,Agriculture Innovation Grant,Agriculture,Rwanda,"Agriculture, Innovation",Senior,2024-11-01,"$20,000",AgriGrowth Foundation
+107,Job,UX Designer,Design,Remote,"Figma, User Testing",Entry,2024-10-20,$5000,Design Studio Inc.
+108,Collaboration,AI-Driven Marketing Collaboration,Marketing,Musanze,"Digital Marketing, AI",Intermediate,2024-12-25,N/A,MarketAI Hub
+109,Job,Cybersecurity Analyst,Cybersecurity,Kigali,"Cybersecurity, Networking",Senior,2024-11-15,$6000,CyberSecure Inc.
+110,Funding,Social Enterprise Funding,Social Impact,Remote,"Business Strategy, Impact Assessment",Intermediate,2024-12-05,"$15,000",Impact Ventures

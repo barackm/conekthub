@@ -1,55 +1,44 @@
+#!/usr/bin/env python
+import sys
 import os
-from crewai import LLM, Agent, Task, Crew
-from crewai_tools import SerperDevTool
+import csv
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.crew import TalentConnectionCrew 
 from dotenv import load_dotenv
 
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
 
 
-llm = LLM(model="gpt-4", temperature=0.7, max_tokens=500)
-
-search_tool = SerperDevTool()
-
-
-researcher = Agent(
-    llm=llm,
-    role="Senior AI Researcher",
-    goal="Identify recent advancements in AI for medical applications.",
-    backstory="An experienced AI researcher focusing on healthcare innovations.",
-    allow_delegation=False,
-    tools=[search_tool],
-    verbose=1,
-)
-
-search_task = Task(
-    description="Research recent advancements in AI for medical imaging.",
-    expected_output="A brief summary of recent technologies and their potential impact on medical diagnostics.",
-    output_file="research_output.txt",
-    agent=researcher,
-)
+def load_candidate_profile_from_csv(csv_path, index=0):
+    """Load a candidate profile from a CSV file, selecting the profile at the specified index."""
+    with open(csv_path, mode='r', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        candidates = list(reader)
+        if candidates:
+            selected_candidate = candidates[index]
+            return {
+                'name': selected_candidate.get("Name"),
+                'location': selected_candidate.get("Location"),
+                'skills': selected_candidate.get("Skills").split(", "),
+                'experience_level': selected_candidate.get("Experience Level"),
+                'industry': selected_candidate.get("Industry"),
+                'current_role': selected_candidate.get("Current Role"),
+                'interests': selected_candidate.get("Interests")
+            }
+        else:
+            raise ValueError("No candidate profiles found in the CSV file.")
 
 
-blogger = Agent(
-    llm=llm,
-    role="AI Blogger",
-    goal="Write a blog post about the latest advancements in AI for medical imaging.",
-    backstory="An experienced AI blogger with a passion for healthcare innovation.",
-    allow_delegation=False,
-    verbose=1,
-)
-
-blog_task = Task(
-    description="Write a blog post about the latest advancements in AI for medical imaging.",
-    expected_output="A well-researched blog post highlighting the recent technologies and their potential impact on medical diagnostics.",
-    output_file="blog_output.txt",
-    agent=blogger,
-    input_file="research_output.txt",
-)
-
-crew = Crew(agents=[researcher, blogger], tasks=[search_task, blog_task], verbose=1)
+def run():
+    candidate_profile = load_candidate_profile_from_csv('./src/data/talents.csv', index=6)
+    print(candidate_profile)
+    inputs = {
+        'path_to_opportunities_csv': './src/data/opportunities.csv',
+        'candidate_profile': candidate_profile
+    }
+    TalentConnectionCrew().crew().kickoff(inputs=inputs)
 
 if __name__ == "__main__":
-    result = crew.kickoff()
-    print("Task Result:", result)
+    run()

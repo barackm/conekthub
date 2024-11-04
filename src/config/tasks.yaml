@@ -1,0 +1,56 @@
+read_opportunities_task:
+  description: >
+    Load and extract structured data from the opportunities CSV dataset. This
+    data will be used to match against the candidate's skills and experience.
+    Opportunities CSV file: {path_to_opportunities_csv}
+  expected_output: >
+    A structured list of job openings, collaborations, and funding
+    opportunities,  ready for further processing by the Opportunity Hunter
+    agent.
+
+find_talent_matches_task:
+  description: >
+    Using the candidate's profile, identify relevant opportunities from the
+    loaded data that align with their skills, experience level, and interests.
+
+    Candidate Profile {candidate_profile}
+  expected_output: >
+    A curated list of top <=5 opportunities matching the candidate's profile,
+    detailing how each aligns with their qualifications. don't return an
+    opportunity if it doesn't match the candidate's profile. The list can be 1,
+    2, 3, 4, or 5 opportunities.
+
+find_opportunities_task:
+  description: >
+    Refine the list of identified opportunities, ranking and filtering them for
+    optimal relevance to the candidate’s profile. Ensure that only the most
+    suitable  opportunities are selected for the candidate based on their unique
+    skills and career goals.
+
+  expected_output: >
+    A ranked list of opportunities that best match the candidate’s
+    qualifications  and career aspirations, ready for summarization.
+
+summarize_candidate_profile_task:
+  description: >
+    Generate a comprehensive summary of the candidate’s profile, highlighting
+    key skills, experience, and suitability for identified opportunities. This
+    will  provide a narrative that explains why the candidate is well-suited to
+    the suggested roles.
+
+    Candidate Profile: {candidate_profile}
+  expected_output: >
+    A structured summary report of the candidate’s qualifications and
+    suitability  for the top-matched opportunities.
+
+summarize_opportunities_task:
+  description: >
+    Create a final summary of the top-ranked opportunities tailored for the
+    candidate.  This summary includes descriptions, requirements, and
+    application details for each role,  presented in a way that the candidate
+    can easily review and understand.
+
+  expected_output: >
+    A detailed report listing the best-matched opportunities for the candidate,
+    complete with role descriptions, application requirements, deadlines, and
+    potential benefits.
